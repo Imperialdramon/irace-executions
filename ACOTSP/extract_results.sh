@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Crear las carpetas de destino si no existen
-mkdir -p Data/{BH,BL,BH-90,BL-45}
+mkdir -p Results/{BH,BL,BH-90,BL-45}/Data
 
 # Array con los nombres de los escenarios
 scenarios=("BH" "BL" "BH-90" "BL-45")
@@ -9,7 +9,7 @@ scenarios=("BH" "BL" "BH-90" "BL-45")
 # Recorrer cada escenario
 for scenario in "${scenarios[@]}"; do
     # Buscar todas las carpetas de ejecución para el escenario actual
-    find "ACOTSP/Scenarios/$scenario/Runs" -type d -name "${scenario}_seed_*" | while read -r run_dir; do
+    find "Scenarios/$scenario/Runs" -type d -name "${scenario}_seed_*" | while read -r run_dir; do
         # Extraer el número de semilla del nombre de la carpeta
         seed=$(echo "$run_dir" | grep -o '[0-9]\+$')
         
@@ -17,7 +17,7 @@ for scenario in "${scenarios[@]}"; do
         source_file="$run_dir/Results/irace.Rdata"
         
         # Ruta de destino para el archivo renombrado
-        dest_file="Data/$scenario/$seed.Rdata"
+        dest_file="Results/$scenario/Data/$seed.Rdata"
         
         # Copiar el archivo si existe
         if [ -f "$source_file" ]; then
