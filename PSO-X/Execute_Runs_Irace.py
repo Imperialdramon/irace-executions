@@ -34,7 +34,7 @@ directories = [
     ['Scenarios/BL/Base', 'Scenarios/BL/Runs', 'BL'],
     ['Scenarios/BL-32/Base', 'Scenarios/BL-32/Runs', 'BL-32'],
     ['Scenarios/BH/Base', 'Scenarios/BH/Runs', 'BH'],
-    ['Scenarios/BH-65/Base', 'Scenarios/BH-64/Runs', 'BH-65'],
+    ['Scenarios/BH-65/Base', 'Scenarios/BH-65/Runs', 'BH-65'],
 ]
 
 # Random seeds for each combination
