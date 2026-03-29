@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Crear las carpetas de destino si no existen
-mkdir -p Results/{BH,BL,BH-65,BL-32}/Data
+mkdir -p Results/{BH,BL,BH-65,BL-32,Best_Elites}/Data
 
 # Array con los nombres de los escenarios
-scenarios=("BH" "BL" "BH-65" "BL-32")
+scenarios=("BH" "BL" "BH-65" "BL-32" "Best_Elites")
 
 # Recorrer cada escenario
 for scenario in "${scenarios[@]}"; do
